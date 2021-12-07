@@ -22,3 +22,7 @@ Implementation of login and authentication flow using:
 ## Queries
 
 - me
+
+## Testing
+
+- jest
