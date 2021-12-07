@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "ts-node-dev --respawn --transpile-only src/index.ts",
 		"db:setup": "ts-node ./src/test-utils/setup.ts",
-		"test": "npm run db:setup && jest"
+		"test": "npm run db:setup && jest --detectOpenHandles"
 	},
 	"keywords": [],
 	"author": "",
@@ -33,11 +33,13 @@
 		"@types/connect-redis": "^0.0.17",
 		"@types/express": "^4.17.13",
 		"@types/express-session": "^1.17.4",
+		"@types/faker": "^5.5.9",
 		"@types/graphql": "^14.5.0",
 		"@types/jest": "^27.0.3",
 		"@types/node": "^16.11.11",
 		"@types/nodemailer": "^6.4.4",
 		"@types/uuid": "^8.3.3",
+		"faker": "^5.5.3",
 		"jest": "^27.4.3",
 		"nodemon": "^2.0.15",
 		"ts-jest": "^27.1.0",
