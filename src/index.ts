@@ -11,6 +11,7 @@ import { MyContext } from "./types/MyContext"
 import { corsOptions } from "./settings/cors"
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core"
 import { createSchema } from "./utils/createSchema"
+import { graphqlUploadExpress } from "graphql-upload"
 
 const PORT = 4000
 
@@ -46,6 +47,7 @@ const main = async () => {
 	}
 
 	app.use(session(sessionOption))
+	app.use(graphqlUploadExpress())
 
 	await apolloServer.start()
 	apolloServer.applyMiddleware({ app, cors: corsOptions })
